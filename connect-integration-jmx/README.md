@@ -23,4 +23,6 @@
 
 4) Copy the YAMLS from YAMLS folder to ```/etc/newrelic-infra/integrations.d/```
 
+- Edit the files if needed.
+
 5) Restart Agent
