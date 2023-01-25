@@ -1,0 +1,109 @@
+collect:
+  - domain: kafka.connect
+    event_type: kafkaConnectMetrics
+    beans:
+      - query: type=connect-metrics,client-id=*
+        attributes:
+          - connection-close-rate
+          - connection-count
+          - connection-creation-rate
+          - failed-authentication-rate
+          - incoming-byte-rate
+          - io-ratio
+          - io-time-ns-avg
+          - io-wait-ratio
+          - io-wait-time-ns-avg
+          - network-io-rate
+          - outgoing-byte-rate
+          - request-rate
+          - request-size-avg
+          - request-size-max
+          - response-rate
+          - select-rate
+          - successful-authentication-rate
+  - domain: kafka.connect
+    event_type: kafkaConnectorMetrics
+    beans:
+      - query: type=connector-metrics,connector=*
+        attributes:
+          - connector-type
+          - connector-class
+          - connector-version
+          - status
+  - domain: kafka.connect
+    event_type: kafkaConnectSinkTaskMetrics
+    beans:
+      - query: type=sink-task-metrics,connector=*,task=*
+        attributes:
+          - sink-record-read-rate
+          - sink-record-read-total
+          - sink-record-send-rate
+          - sink-record-send-total
+          - sink-record-active-count
+          - sink-record-active-count-max
+          - sink-record-active-count-avg
+          - partition-count
+          - offset-commit-seq-no
+          - offset-commit-completion-rate
+          - offset-commit-completion-total
+          - offset-commit-skip-rate
+          - offset-commit-skip-total
+          - put-batch-max-time-ms
+          - put-batch-avg-time-ms
+  - domain: kafka.connect
+    event_type: kafkaConnectSourceTaskMetrics
+    beans:
+      - query: type=source-task-metrics,connector=*,task=*
+        attributes:
+          - source-record-write-total
+          - source-record-write-rate
+          - source-record-poll-total
+          - source-record-poll-rate
+          - source-record-active-count-max
+          - source-record-active-count-avg
+          - source-record-active-count
+          - poll-batch-max-time-ms
+          - poll-batch-avg-time-ms
+  - domain: kafka.connect
+    event_type: kafkaConnectTaskMetrics
+    beans:
+      - query: type=connector-task-metrics,connector=*,task=*
+        attributes:
+          - status
+          - pause-ratio
+          - running-ratio
+          - offset-commit-success-percentage
+          - offset-commit-failure-percentage
+          - offset-commit-max-time-ms
+          - offset-commit-avg-time-ms
+          - batch-size-max
+          - batch-size-avg
+  - domain: kafka.connect
+    event_type: kafkaConnectWorkerMetrics
+    beans:
+      - query: type=connect-worker-metrics
+        attributes:
+          - task-count
+          - connector-count
+          - connector-startup-attempts-total
+          - connector-startup-success-total
+          - connector-startup-success-percentage
+          - connector-startup-failure-total
+          - connector-startup-failure-percentage
+          - task-startup-attempts-total
+          - task-startup-success-total
+          - task-startup-success-percentage
+          - task-startup-failure-total
+          - task-startup-failure-percentage
+  - domain: kafka.connect
+    event_type: kafkaConnectWorkerRebalanceMetrics
+    beans:
+      - query: type=connect-worker-rebalance-metrics
+        attributes:
+          - leader-name
+          - epoch
+          - completed-rebalances-total
+          - rebalancing
+          - rebalance-max-time-ms
+          - rebalance-avg-time-ms
+          - time-since-last-rebalance-ms

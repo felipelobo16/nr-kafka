@@ -1,0 +1,11 @@
+integrations:
+- name: nri-jmx
+  env:
+    JMX_HOST: localhost
+    JMX_PORT: 9875
+    #JMX_PASS: admin
+    #JMX_USER: admin
+    COLLECTION_FILES: "/etc/newrelic-infra/integrations.d/kafka_connect.yml"
+  interval: 15s
+  labels:
+    env: production
