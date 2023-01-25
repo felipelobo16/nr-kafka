@@ -1,6 +1,6 @@
-# New Relic Kafka Integrations on HOST
+# New Relic - Kafka Integrations on HOST
 
-New Relic Kafka Connector
+## New Relic Kafka Connector
 
 Folder: 
 ```connect-integration-jmx```
