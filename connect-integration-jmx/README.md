@@ -1,4 +1,4 @@
-#New Relic Kafka Connector
+# New Relic Kafka Connector
 
 1) Building and Run container:
 
