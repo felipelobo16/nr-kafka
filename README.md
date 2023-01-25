@@ -1,5 +1,9 @@
-# nr-kafka
-New Relic Kafka Integrations on HOST
+# New Relic Kafka Integrations on HOST
+
+New Relic Kafka Connector
+
+Folder: 
+```connect-integration-jmx```
 
 Bulding:
 ```docker build . -t nr-builder-bins```
