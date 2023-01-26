@@ -1,8 +1,8 @@
 # New Relic Kafka Connector
 
-1) Building and Run container:
+1) Build and Run container:
 
-- Bulding: ```docker build . -t nr-builder-bins```
+- Build: ```docker build . -t nr-builder-bins```
 
 - Run: ```docker run -d --name nr-builder nr-builder-bins```
 
