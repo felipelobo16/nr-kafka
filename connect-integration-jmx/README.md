@@ -26,4 +26,4 @@
 - Edit the files if needed.
 
 5) Restart Agent
-- ```systemctl restar newrelic-infra```
+- ```systemctl restart newrelic-infra```
