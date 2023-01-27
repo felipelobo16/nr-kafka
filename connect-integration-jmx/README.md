@@ -1,6 +1,6 @@
 # New Relic Kafka Connector
 
-- needed: Infrastructure Agent.
+## Needed: ```Infrastructure Agent.```
 
 1) Build and Run container:
 
