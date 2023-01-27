@@ -1,5 +1,7 @@
 # New Relic Kafka Connector
 
+- needed: Infrastructure Agent.
+
 1) Build and Run container:
 
 - Build: ```docker build . -t nr-builder-bins```
